@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkinSense AI ✨</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-blobs">
+    <span></span><span></span><span></span>
+  </div>
+
+  <header>
+    <h1>SkinSense AI</h1>
+    <p>Explore ingredients that suit your skin best</p>
+  </header>
+
+  <!-- ✅ Proper Flask Form -->
+  <form class="form-card" action="/recommend" method="POST">
+
+    <label for="skinType">Skin Type</label>
+    <select id="skinType" name="skin_type" required>
+      <option value="" disabled selected>Select your skin type</option>
+      <option value="Dry">Dry</option>
+      <option value="Oily">Oily</option>
+      <option value="Combination">Combination</option>
+      <option value="Sensitive">Sensitive</option>
+    </select>
+
+    <label for="concern">Primary Concern</label>
+    <select id="concern" name="concern" required>
+      <option value="" disabled selected>Select your concern</option>
+      <option value="Acne">Acne</option>
+      <option value="Hydration">Hydration</option>
+      <option value="Radiance">Radiance</option>
+      <option value="Texture">Texture</option>
+    </select>
+
+    <!-- ✅ Submit button triggers Flask -->
+    <button type="submit">Explore Products</button>
+
+  </form>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #fef6ff, #e6f4ff);
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #222;
+}
+
+/* ===== Animated Background ===== */
+.bg-blobs span {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #ffb3ec, #8fd3f4);
+  filter: blur(90px);
+  opacity: 0.6;
+  border-radius: 50%;
+  animation: float 18s infinite alternate;
+}
+
+.bg-blobs span:nth-child(1) { top: 10%; left: 10%; }
+.bg-blobs span:nth-child(2) { top: 60%; left: 20%; animation-delay: 3s; }
+.bg-blobs span:nth-child(3) { top: 30%; left: 70%; animation-delay: 6s; }
+
+@keyframes float {
+  to { transform: translateY(-40px) translateX(40px); }
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header h1 {
+  font-size: 2.6rem;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+header p {
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+/* ===== Form Card ===== */
+.form-card {
+  max-width: 400px;
+  margin: auto;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(14px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+label {
+  font-weight: 600;
+  margin-top: 1rem;
+  display: block;
+}
+
+/* ===== Colorful Dropdown ===== */
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+select:hover {
+  transform: scale(1.02);
+}
+
+/* ===== Button ===== */
+button {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ===== Results Grid ===== */
+.results-grid {
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); */
+}
+
+/* ===== Compact Cards ===== */
+.ingredient-card.compact {
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ingredient-card.compact h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.ingredient-card.compact .desc {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+
+/* Limit text height visually */
+.ingredient-card.compact p {
+  font-size: 0.9rem;
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  .results-grid {
+    padding: 2rem 1rem;
+  }
+}
+/* ---learn more button---- */
+.learn-more-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  margin-top: 1rem;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.learn-more-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
